@@ -29,6 +29,7 @@
             removematerial();
             updateSerialNumber();
             updatematerial();
+            BtnSave();
         });
 
         var materials = [];
@@ -49,6 +50,15 @@
                 clearForm();
             });
         };
+
+
+        var BtnSave = function() {
+            $('#btn_save').click(function() {
+                if(validate()) {
+                    alert('Submitted Successfully');
+                }
+            })
+        }
 
         var clearForm = function () {
             $('.txt_shown_error').html('');
