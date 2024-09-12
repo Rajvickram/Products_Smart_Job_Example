@@ -27,7 +27,6 @@
             BtnList();
             BtnAddMaterial();
             removematerial();
-            updateSerialNumber();
             updatematerial();
             BtnSave();
         });
@@ -144,12 +143,6 @@
             });
         };
 
-        var updateSerialNumber = function () {
-            $('.material').each(function (index) {
-                $(this).find('td:eq(0)').html(index + 1);
-            });
-        };
-
 
         var validate = function () {
             $('.txt_shown_error').html('');
@@ -247,8 +240,6 @@
                 total += item.total;
             });
             $('#total').text(total > 0 ? total.toFixed(2) : "");
-
-            updateSerialNumber();
         };
 
     </script>
